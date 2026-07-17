@@ -1,0 +1,19 @@
+cloud_provider  = "aws"
+
+certificate_name = "platform-tls"
+
+domain_name = "example.com"
+
+subject_alternative_names = [
+  "*.example.com"
+]
+
+hosted_zone_id = "Z123456789"
+
+cloud_provider  = "azure"
+
+certificate_name = "platform-tls"
+
+domain_name = "example.com"
+
+key_vault_id = "/subscriptions/..."

@@ -1,0 +1,22 @@
+cloud_provider = "aws"
+
+cluster_name = "dev-eks"
+
+kubernetes_version = "1.32"
+
+private_cluster_enabled = true
+
+enable_autoscaling = true
+
+min_nodes = 2
+
+max_nodes = 10
+
+node_count = 3
+
+node_size = "t3.large"
+
+tags = {
+  environment = "dev"
+  owner       = "platform-team"
+}

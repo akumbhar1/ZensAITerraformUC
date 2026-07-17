@@ -1,0 +1,17 @@
+cloud_provider = "aws"
+
+database_type = "postgresql"
+
+name = "sonarqube-postgres"
+
+sku = "db.t3.medium"
+
+storage_gb = 100
+
+backup_retention_days = 14
+
+public_access = false
+
+admin_username = "postgresadmin"
+
+admin_secret_name = "prod/postgres/admin"

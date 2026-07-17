@@ -1,0 +1,17 @@
+cloud_provider = "azure"
+
+registry_name   = "companyacrdev"
+repository_name = "orders-api"
+
+repository_prefix = "platform/dev"
+
+retention_days = 30
+
+cluster_principal_id = "aks-managed-identity"
+
+cicd_principal_id = "azure-devops-oidc"
+
+tags = {
+  owner       = "platform-team"
+  environment = "dev"
+}

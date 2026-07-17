@@ -1,31 +1,30 @@
 terraform {
-  required_version = ">= 1.6"
+  required_version = ">= 1.5"
 
   required_providers {
-
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = var.azurerm_version
+      version = "~> 4.0"
     }
 
     aws = {
       source  = "hashicorp/aws"
-      version = var.aws_version
+      version = "~> 6.0"
     }
 
     google = {
       source  = "hashicorp/google"
-      version = var.google_version
+      version = "~> 7.0"
     }
 
     oci = {
       source  = "oracle/oci"
-      version = var.oci_version
+      version = "~> 7.0"
     }
 
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = var.do_version
+      version = "~> 2.0"
     }
   }
 }

@@ -3,7 +3,7 @@ variable "cloud_provider" {
 
   validation {
     condition = contains(
-      ["azure", "aws", "gcp", "oci", "digitalocean"],
+      ["azure","aws","gcp","oci","digitalocean"],
       lower(var.cloud_provider)
     )
 
@@ -11,27 +11,24 @@ variable "cloud_provider" {
   }
 }
 
-variable "name" {
+variable "certificate_name" {
   type = string
 }
 
-variable "location" {
+variable "domain_name" {
   type = string
 }
 
-variable "internal" {
-  type    = bool
-  default = false
+variable "subject_alternative_names" {
+  type = list(string)
+
+  default = [
+    "*.example.com"
+  ]
 }
 
-variable "allowed_cidrs" {
-  type    = list(string)
-  default = ["0.0.0.0/0"]
-}
-
-variable "ingress_ports" {
-  type    = list(number)
-  default = [80, 443]
+variable "dns_zone_name" {
+  type = string
 }
 
 variable "tags" {
@@ -44,12 +41,12 @@ variable "resource_group_name" {
   default = null
 }
 
-variable "subnet_id" {
+variable "key_vault_id" {
   type    = string
   default = null
 }
 
-variable "vpc_id" {
+variable "hosted_zone_id" {
   type    = string
   default = null
 }
@@ -63,3 +60,9 @@ variable "compartment_id" {
   type    = string
   default = null
 }
+
+variable "enable_cert_manager" {
+  type    = bool
+  default = false
+}
+

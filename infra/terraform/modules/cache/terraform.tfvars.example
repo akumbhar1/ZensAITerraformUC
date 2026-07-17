@@ -1,0 +1,17 @@
+# Azure
+cloud_provider = "azure"
+
+cache_name = "redis-prod"
+location   = "eastus"
+
+memory_size = 1
+
+# AWS
+cloud_provider = "aws"
+
+cache_name = "redis-prod"
+
+memory_size = 1
+aws_region = "us-east-1"
+
+# GCP
