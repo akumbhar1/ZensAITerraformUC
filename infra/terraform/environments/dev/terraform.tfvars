@@ -1,4 +1,6 @@
-region = "blr1"
+do_token    = "dop_v1_your_actual_token_here"
+environment = "dev"
+region = "nyc3"
 
 domain_name = "dev.company.com"
 
